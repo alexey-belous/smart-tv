@@ -14,7 +14,7 @@ export default {
         commandType: 'type',
         payload: text
     }),
-    mouseMove: (x, y) => control({
+    mouseMove: async (x, y) => await control({
         commandType: 'mouse-move',
         payload: `${x < 0 || y < 0 ? '--' : ''} ${x} ${y}`
     }),
